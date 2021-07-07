@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {SightseeingPoint} from '../models/sightseeing-point';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import {environment} from '../../environments/environment';
 import {Country} from '../models/country';
 import {map} from 'rxjs/operators';
@@ -12,7 +12,7 @@ import {map} from 'rxjs/operators';
 export class SightsService {
 
   selectedSight: SightseeingPoint;
-
+  selectedCity = new Subject<any>();
   constructor(private http: HttpClient) {
   }
 

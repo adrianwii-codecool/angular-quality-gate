@@ -83,6 +83,18 @@
       "description": "Pomnik Adama mickiewicza",
       "color": 2,
       "id": "HOhW5NP"
+    },
+    {
+      "name": "Wawka",
+      "longitude": 21.054,
+      "latitude": 52.245,
+      "country": {
+        "name": "Poland",
+        "iata_code": "PL"
+      },
+      "description": "Jakaś tam warszawka",
+      "color": 1,
+      "id": "2Y8Zylv"
     }
   ]
 }
