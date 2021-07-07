@@ -45,8 +45,32 @@
         "iata_code": "PL"
       },
       "description": "Krowodrza Krk",
-      "color": 2,
+      "color": 1,
       "id": "4kTV7Na"
+    },
+    {
+      "name": "Krowodrza",
+      "longitude": 19.885,
+      "latitude": 50.065,
+      "country": {
+        "name": "Poland",
+        "iata_code": "PL"
+      },
+      "description": "Opsik",
+      "color": 2,
+      "id": "GAj71Rn"
+    },
+    {
+      "name": "Test",
+      "longitude": 52.09843,
+      "latitude": 12.0984,
+      "country": {
+        "name": "Poland",
+        "iata_code": "PL"
+      },
+      "description": "Poland description",
+      "color": 2,
+      "id": "EpcLt5Z"
     }
   ]
 }

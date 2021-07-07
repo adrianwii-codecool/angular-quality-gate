@@ -60,7 +60,6 @@ export class SightFormComponent implements OnInit {
     if (this.sightCoordinates) {
       this.sightsService.getSight(this.sightCoordinates.longitude, this.sightCoordinates.latitude)
         .subscribe((sight: any) => {
-          console.log(sight);
           this.form.patchValue({
             name: sight.name,
             longitude: sight.longitude,

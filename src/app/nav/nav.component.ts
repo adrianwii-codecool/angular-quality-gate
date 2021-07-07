@@ -17,7 +17,7 @@ export class NavComponent {
     },
     {
       title: 'ADD',
-      path: 'sights-list/add'
+      path: 'add'
     }
   ];
 }

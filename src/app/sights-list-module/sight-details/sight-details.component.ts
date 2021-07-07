@@ -7,13 +7,11 @@ import {SightseeingPoint} from '../../models/sightseeing-point';
   templateUrl: './sight-details.component.html',
   styleUrls: ['./sight-details.component.scss']
 })
-export class SightDetailsComponent implements OnInit {
+export class SightDetailsComponent {
 
   @Input() sight: SightseeingPoint;
   constructor(private activeModal: NgbActiveModal) { }
 
-  ngOnInit(): void {
-  }
   close(): void {
     this.activeModal.close();
   }
