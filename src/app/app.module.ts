@@ -11,7 +11,8 @@ import {NavComponent} from './nav/nav.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import {HttpClientModule} from '@angular/common/http';
-import {SightsListComponent} from './sights-list/sights-list.component';
+import {SightsListModuleModule} from "./sights-list-module/sights-list-module.module";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,6 @@ import {SightsListComponent} from './sights-list/sights-list.component';
     MapComponent,
     SightsComponent,
     NavComponent,
-    SightsListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +30,9 @@ import {SightsListComponent} from './sights-list/sights-list.component';
     ReactiveFormsModule,
     MatTabsModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    SightsListModuleModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

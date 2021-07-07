@@ -2,36 +2,51 @@
   "sights": [
     {
       "name": "Wawel",
-      "longitude": 19.9353576,
-      "latitude": 50.0541492,
+      "longitude": 22,
+      "latitude": 52,
       "country": {
-        "name": "POLAND",
+        "name": "Polska",
         "iata_code": "PL"
       },
-      "description": "The Wawel Royal Castle and the Wawel Hill constitute the most historically and culturally important site in Poland. For centuries the residence of kings and the symbol of Polish statehood, the castle is now one of the country’s premier art museums.",
-      "color": 0
+      "description": "Wawel 2",
+      "color": 2,
+      "id": "N41z-Dgcz-"
     },
     {
       "name": "Dragon",
-      "longitude": 19.933606117422418,
-      "latitude": 50.053059067891,
+      "longitude": 19.933606,
+      "latitude": 50.05305,
       "country": {
         "name": "POLAND",
         "iata_code": "PL"
       },
       "description": "Dragon of Wawel Hill, is a famous dragon in Polish folklore. His lair was in a cave at the foot of Wawel Hill on the bank of the Vistula River",
-      "color": 2
+      "color": 2,
+      "id": "F81z-aWcz-"
     },
     {
       "name": "Krakus Mound",
-      "longitude": 19.957947163916888,
-      "latitude": 50.038264921962835,
+      "longitude": 19.222,
+      "latitude": 50.333,
       "country": {
         "name": "POLAND",
         "iata_code": "PL"
       },
       "description": "This large mound of unknown origin is a popular destination for scenic views of the city.",
-      "color": 1
+      "color": 1,
+      "id": "P7+5Ggza!n"
+    },
+    {
+      "name": "Krowodrza",
+      "longitude": 50.065,
+      "latitude": 19.885,
+      "country": {
+        "name": "PL",
+        "iata_code": "PL"
+      },
+      "description": "Krowodrza Krk",
+      "color": 2,
+      "id": "4kTV7Na"
     }
   ]
 }

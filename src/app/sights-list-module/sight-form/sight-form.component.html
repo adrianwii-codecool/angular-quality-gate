@@ -1,0 +1,49 @@
+<div class="container">
+  <form [formGroup]="form" class="d-flex flex-column" (ngSubmit)="sightModify()">
+    <h2>Sight</h2>
+
+    <label for="name">Name:
+      <input id="name" type="text" formControlName="name" autocomplete="off">
+    </label>
+    <div style="color: red;" *ngIf="errorMessage('name','required')">name is required</div>
+    <label for="longitude">Longitude:
+      <input id="longitude" type="number" formControlName="longitude" autocomplete="off">
+    </label>
+    <div style="color: red;" *ngIf="errorMessage('longitude','required')">longitude is required</div>
+    <div style="color: red;" *ngIf="errorMessage('longitude','pattern')">invalid coordinate format</div>
+    <label for="latitude">Latitude:
+      <input id="latitude" type="number" formControlName="latitude" autocomplete="off">
+    </label>
+    <div style="color: red;" *ngIf="errorMessage('latitude','required')">latitude is required</div>
+    <div style="color: red;" *ngIf="errorMessage('latitude','pattern')">invalid coordinate format</div>
+    <label for="description">Description:
+      <input id="description" type="text" formControlName="description" autocomplete="off">
+    </label>
+    <div style="color: red;" *ngIf="errorMessage('description','required')">description is required</div>
+    <div style="color: red;" *ngIf="errorMessage('description','maxlength')">description have to be short than
+      256 characters
+    </div>
+    <label for="country_name">Country name:
+      <input id="country_name" type="text" formControlName="country_name" autocomplete="off">
+    </label>
+    <div style="color: red;" *ngIf="errorMessage('country_name','required')">country_name is required</div>
+    <label for="iata_code">Iata Code:
+      <input id="iata_code" type="text" formControlName="iata_code" autocomplete="off">
+    </label>
+    <div style="color: red;" *ngIf="errorMessage('iata_code','required')">iata_code is required</div>
+    <label for="color">Color:
+      <select id="color" formControlName="color" class="form-control">
+        <option *ngFor="let color of colors" [value]="color[0]"> {{ color[1] }}</option>
+      </select>
+    </label>
+    <div style="color: red;" *ngIf="errorMessage('color','required')">color is required</div>
+    <ng-container *ngIf="sightCoordinates; then modify; else add"></ng-container>
+    <ng-template #modify>
+      <button type="submit" [disabled]="this.form.invalid">Modify Sight</button>
+    </ng-template>
+    <ng-template #add>
+      <button type="submit" [disabled]="this.form.invalid">Add new Sight</button>
+    </ng-template>
+
+  </form>
+</div>

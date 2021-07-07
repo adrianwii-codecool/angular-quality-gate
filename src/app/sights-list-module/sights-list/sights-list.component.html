@@ -1,0 +1,10 @@
+<div class="container">
+
+  <div class="sight-element" *ngFor="let sight of sights">
+    <h4>{{sight.name}}</h4>
+    <sub>{{sight.longitude}} {{sight.latitude}}</sub>
+    <div class="highlight" [style.background-color]="sight.getColor()"></div>
+    <button (click)="editSight(sight)" >Edit</button>
+    <button (click)="open(sight)">Show details</button>
+  </div>
+</div>
