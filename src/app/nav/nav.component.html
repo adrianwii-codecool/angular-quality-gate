@@ -1,7 +1,7 @@
 <nav mat-tab-nav-bar>
   <a *ngFor="let link of links"
      routerLink="{{link.path}}" routerLinkActive="active-link"> {{link.title}} </a>
-  <select id="city" (change)="changeCity($event)">
+  <select *ngIf="activeRoute('sights')" id="city" (change)="changeCity($event)">
     <option *ngFor="let city of cities" [value]="city.name">{{city.name}}</option>
   </select>
 </nav>

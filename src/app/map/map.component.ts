@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, Output, ViewChild} from '@angular/core';
 import {SightseeingPoint} from '../models/sightseeing-point';
 import * as mapbox from 'ngx-mapbox-gl';
 import {Location} from '../models/location';
@@ -9,7 +9,7 @@ import {environment} from '../../environments/environment';
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements OnChanges{
+export class MapComponent implements OnChanges {
 
   @ViewChild(mapbox.MapComponent, {static: true}) map;
   @Input() location: Location;
@@ -22,8 +22,8 @@ export class MapComponent implements OnChanges{
     this.loading = false;
     this.map.mapInstance.flyTo({center: [location.longitude, location.latitude]});
   }
-  ngOnChanges(): void
-  {
+
+  ngOnChanges(): void {
     this.countSightsInRadius(environment.cityRadius);
   }
 

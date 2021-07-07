@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {SightsService} from '../services/sights.service';
 import {environment} from '../../environments/environment';
 import {City} from '../models/city';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -10,7 +11,9 @@ import {City} from '../models/city';
 })
 export class NavComponent implements OnInit {
 
-  constructor(private sightsService: SightsService) {
+  @ViewChild('select') selection: ElementRef;
+
+  constructor(private sightsService: SightsService, private router: Router) {
   }
 
   links = [
@@ -37,5 +40,9 @@ export class NavComponent implements OnInit {
   changeCity(event): void {
     const selectedCity = this.cities.filter(city => city.name === event.target.value).shift();
     this.sightsService.selectedCity.next(selectedCity.coordinates);
+  }
+
+  activeRoute(route): boolean {
+    return this.router.url === `/${route}`;
   }
 }

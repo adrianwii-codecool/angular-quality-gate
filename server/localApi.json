@@ -95,6 +95,18 @@
       "description": "Jakaś tam warszawka",
       "color": 1,
       "id": "2Y8Zylv"
+    },
+    {
+      "name": "Sosnowy Dworek",
+      "longitude": 21.146474,
+      "latitude": 52.198347,
+      "country": {
+        "name": "Poland",
+        "iata_code": "Pl"
+      },
+      "description": "Dworek pod warszawką",
+      "color": 1,
+      "id": "NIu7KCV"
     }
   ]
 }
