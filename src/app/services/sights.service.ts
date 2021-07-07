@@ -17,7 +17,7 @@ export class SightsService {
   }
 
   getSights(): Observable<SightseeingPoint[]> {
-     this.http.get<SightseeingPoint[]>(`${environment.apiUrl}/sights`).pipe(
+     return this.http.get<SightseeingPoint[]>(`${environment.apiUrl}/sights`).pipe(
       tap(console.log),
       map(result => result),
       map(sights => {
