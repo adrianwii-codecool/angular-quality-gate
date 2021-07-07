@@ -1,7 +1,7 @@
 {
   "sights": [
     {
-      "name": "Wawel",
+      "name": "Gdzieś na swiecie",
       "longitude": 22,
       "latitude": 52,
       "country": {
@@ -70,7 +70,19 @@
       },
       "description": "Poland description",
       "color": 2,
-      "id": "EpcLt5Z"
+      "id": "0qYkFqt"
+    },
+    {
+      "name": "Pomnik Adama Mickiewicza",
+      "longitude": 19.937908385,
+      "latitude": 50.061500725,
+      "country": {
+        "name": "Poland",
+        "iata_code": "PL"
+      },
+      "description": "Pomnik Adama mickiewicza",
+      "color": 2,
+      "id": "HOhW5NP"
     }
   ]
 }

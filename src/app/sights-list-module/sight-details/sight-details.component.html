@@ -1,11 +1,8 @@
 <div class="modal-header">
-  <h4 class="modal-title">Sight point</h4>
+  <h4 class="modal-title" [style.color]="sight.getColor()">{{sight.name}}</h4>
 </div>
 <div class="modal-body">
-  <p>Name: {{sight.name}}</p>
-  <p>Long: {{sight.longitude}}</p>
-  <p>Latitude: {{sight.latitude}}</p>
-  <p>Description: {{sight.description}}</p>
+  <p>{{sight.description}}</p>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-outline-dark" (click)="close()">Close</button>
