@@ -1,0 +1,21 @@
+<div class="loader" *ngIf="loading">
+  LOADING...
+</div>
+
+<mgl-map
+  [style]="'mapbox://styles/adrianwii-codecool/ckqswptnw2dnj19lty7gx7vsg'"
+  [zoom]="[12]"
+  (load)="centerMap(location)"
+>
+  <mgl-marker
+    *ngFor="let sight of sights"
+    [lngLat]="[sight.longitude, sight.latitude]"
+  >
+    <div class="airport-marker" (click)="selectedSightEvent.emit(sight)">
+      <div class="price">
+        {{ sight.name }}
+      </div>
+      <div class="sight-marker"></div>
+    </div>
+  </mgl-marker>
+</mgl-map>

@@ -1,0 +1,5 @@
+<nav mat-tab-nav-bar>
+  <a *ngFor="let link of links"
+     routerLink="{{link.path}}" routerLinkActive="active-link"> {{link.title}} </a>
+</nav>
+<div class="nav-shadow"></div>

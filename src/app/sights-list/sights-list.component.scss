@@ -1,0 +1,22 @@
+.container {
+  margin: 100px 1em 0 1em;
+}
+
+.sight-element {
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+}
+
+.sight-element:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  transform: scaleY(1.05);
+}
+
+.highlight {
+  width: 100px;
+  height: 10px;
+  border-radius: 5px;
+  margin: 0.5em 0;
+}
