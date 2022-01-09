@@ -1,0 +1,9 @@
+<div class="modal-header">
+  <h4 class="modal-title" [style.color]="sight.getColor()">{{sight.name}}</h4>
+</div>
+<div class="modal-body">
+  <p>{{sight.description}}</p>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="close()">Close</button>
+</div>

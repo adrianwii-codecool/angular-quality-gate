@@ -16,7 +16,6 @@ export class SightsComponent implements OnInit {
   @ViewChild('mapComponent', {static: false}) mapComponent: MapComponent;
   currentCity: Location;
   sights$: Observable<SightseeingPoint[]>;
-
   constructor(
     private sightsService: SightsService,
     private router: Router
@@ -26,6 +25,10 @@ export class SightsComponent implements OnInit {
   ngOnInit(): void {
     this.currentCity = new Location(19.9449, 50.0646);
     this.sights$ = this.sightsService.getSights();
+    this.sightsService.selectedCity.subscribe((coordinates: Location) => {
+      this.currentCity = new Location(coordinates.longitude, coordinates.latitude);
+      this.centerMap(this.currentCity);
+    });
   }
 
   centerMap(location: Location): void {
